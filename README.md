@@ -90,7 +90,8 @@ Para subir esta página a internet y compartir tu portafolio profesional en tus 
     *   Bajo la sección **Build and deployment**, en **Source** selecciona `Deploy from a branch`.
     *   En **Branch** selecciona `main` (o la rama correspondiente) y la carpeta `/root` (raíz).
     *   Haz clic en **Save** (Guardar).
-5.  **¡Listo!** En un par de minutos, GitHub te dará el enlace público de tu portafolio web (por ejemplo, `https://tu-usuario.github.io/nombre-del-repositorio/`).
+5.  **¡Listo!** Tu portafolio web ya se encuentra publicado y accesible públicamente en:
+    🔗 **[https://mfca-fer.github.io/CV-MiltonFernandoChitacapaAucapina/](https://mfca-fer.github.io/CV-MiltonFernandoChitacapaAucapina/)**
 
 ---
 
