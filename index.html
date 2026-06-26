@@ -1,0 +1,2022 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <!-- SEO Meta Tags -->
+  <title>Milton Fernando Chitacapa Aucapiña | Portafolio Profesional</title>
+  <meta name="description" content="Portafolio profesional de Milton Fernando Chitacapa Aucapiña. Estudiante de Administración de Infraestructura y Plataformas Tecnológicas con formación en redes, soporte técnico y Linux.">
+  <meta name="keywords" content="Milton Chitacapa, Administración de Infraestructura, Redes, Cisco, Linux, Soporte Técnico, Portafolio, Universidad de Cuenca">
+  <meta name="author" content="Milton Fernando Chitacapa Aucapiña">
+  
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Milton Fernando Chitacapa Aucapiña | Portafolio Profesional">
+  <meta property="og:description" content="Portafolio profesional en Administración de Infraestructura, Redes y Plataformas Tecnológicas.">
+  
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  
+  <!-- Lucide Icons (CDN) -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+  
+  <!-- Estilos CSS -->
+  <style>
+    /* Variables de Color (Paleta del PDF + Modo Oscuro) */
+    :root {
+      /* Modo Claro (Colores de tu CV) */
+      --bg-primary: #ece9e5;      /* Crema del fondo */
+      --bg-secondary: #ffffff;    /* Blanco para tarjetas */
+      --text-primary: #0f1419;    /* Azul-negro profundo para texto principal */
+      --text-secondary: #566c81;  /* Azul pizarra para subtítulos/detalles */
+      --accent: #566c81;          /* Acento principal */
+      --accent-hover: #415366;    /* Acento hover */
+      --border-color: #d1cdc7;    /* Borde suave crema */
+      --shadow-sm: 0 2px 8px rgba(15, 20, 25, 0.04);
+      --shadow-md: 0 8px 30px rgba(15, 20, 25, 0.06);
+      --shadow-lg: 0 16px 40px rgba(15, 20, 25, 0.08);
+      
+      --font-headings: 'Plus Jakarta Sans', sans-serif;
+      --font-body: 'Inter', sans-serif;
+      --transition-speed: 0.3s;
+      --radius-sm: 8px;
+      --radius-md: 16px;
+      --radius-lg: 24px;
+    }
+
+    [data-theme="dark"] {
+      /* Modo Oscuro (Inversión elegante) */
+      --bg-primary: #0f1419;      /* Fondo oscuro azul-negro */
+      --bg-secondary: #161d24;    /* Tarjetas oscuras */
+      --text-primary: #ece9e5;    /* Texto crema */
+      --text-secondary: #9cb3c9;  /* Azul pizarra claro */
+      --accent: #6b849c;          /* Acento claro */
+      --accent-hover: #88a2bc;    /* Acento hover claro */
+      --border-color: #232f3a;    /* Borde oscuro */
+      --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.2);
+      --shadow-md: 0 8px 30px rgba(0, 0, 0, 0.3);
+      --shadow-lg: 0 16px 40px rgba(0, 0, 0, 0.4);
+    }
+
+    /* Reset global */
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      scroll-behavior: smooth;
+    }
+
+    body {
+      background-color: var(--bg-primary);
+      color: var(--text-primary);
+      font-family: var(--font-body);
+      line-height: 1.6;
+      transition: background-color var(--transition-speed), color var(--transition-speed);
+      overflow-x: hidden;
+    }
+
+    h1, h2, h3, h4, h5, h6 {
+      font-family: var(--font-headings);
+      font-weight: 700;
+      color: var(--text-primary);
+      line-height: 1.2;
+    }
+
+    a {
+      color: var(--accent);
+      text-decoration: none;
+      transition: color var(--transition-speed);
+    }
+
+    a:hover {
+      color: var(--accent-hover);
+    }
+
+    /* Layout general */
+    .container {
+      width: 100%;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+
+    .section-title {
+      font-size: 2.2rem;
+      margin-bottom: 12px;
+      position: relative;
+      display: inline-block;
+    }
+
+    .section-title::after {
+      content: '';
+      display: block;
+      width: 40px;
+      height: 4px;
+      background-color: var(--accent);
+      margin-top: 8px;
+      border-radius: 2px;
+    }
+
+    .section-subtitle {
+      color: var(--text-secondary);
+      font-size: 1.1rem;
+      margin-bottom: 48px;
+      max-width: 600px;
+    }
+
+    section {
+      padding: 100px 0;
+      border-bottom: 1px solid var(--border-color);
+    }
+
+    /* Header y Navegación (Glassmorphism) */
+    header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      z-index: 1000;
+      background-color: rgba(236, 233, 229, 0.8);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--border-color);
+      transition: background-color var(--transition-speed), border-color var(--transition-speed);
+    }
+
+    [data-theme="dark"] header {
+      background-color: rgba(15, 20, 25, 0.8);
+    }
+
+    .nav-container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      height: 80px;
+    }
+
+    .logo {
+      font-family: var(--font-headings);
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .logo-text {
+      display: flex;
+      flex-direction: column;
+      line-height: 1.1;
+    }
+
+    .logo-names {
+      font-size: 1.05rem;
+      font-weight: 800;
+      letter-spacing: -0.3px;
+      color: var(--text-primary);
+    }
+
+    .logo-names span {
+      color: var(--accent);
+    }
+
+    .logo-lastnames {
+      font-size: 0.8rem;
+      font-weight: 600;
+      letter-spacing: 0.5px;
+      color: var(--text-secondary);
+      text-transform: uppercase;
+    }
+
+    .nav-menu {
+      display: flex;
+      gap: 32px;
+      align-items: center;
+      list-style: none;
+    }
+
+    .nav-link {
+      font-size: 0.95rem;
+      font-weight: 500;
+      color: var(--text-primary);
+      opacity: 0.8;
+      position: relative;
+      padding: 8px 0;
+    }
+
+    .nav-link:hover {
+      opacity: 1;
+      color: var(--accent);
+    }
+
+    .nav-link::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 0;
+      height: 2px;
+      background-color: var(--accent);
+      transition: width var(--transition-speed);
+    }
+
+    .nav-link:hover::after {
+      width: 100%;
+    }
+
+    .nav-actions {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+    }
+
+    /* Botón de cambio de tema */
+    .theme-toggle-btn {
+      background: none;
+      border: 1px solid var(--border-color);
+      color: var(--text-primary);
+      padding: 10px;
+      border-radius: 50%;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: background-color var(--transition-speed), border-color var(--transition-speed);
+    }
+
+    .theme-toggle-btn:hover {
+      background-color: rgba(86, 108, 129, 0.1);
+      border-color: var(--accent);
+    }
+
+    .theme-toggle-btn svg {
+      width: 20px;
+      height: 20px;
+      transition: transform 0.5s ease;
+    }
+
+    .theme-toggle-btn:hover svg {
+      transform: rotate(30deg);
+    }
+
+    .mobile-menu-btn {
+      display: none;
+      background: none;
+      border: none;
+      color: var(--text-primary);
+      cursor: pointer;
+    }
+
+    /* Hero Section */
+    .hero {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      padding-top: 120px;
+      position: relative;
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.2fr 0.8fr;
+      gap: 48px;
+      align-items: center;
+    }
+
+    .hero-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background-color: rgba(86, 108, 129, 0.1);
+      color: var(--accent);
+      padding: 8px 16px;
+      border-radius: 100px;
+      font-size: 0.85rem;
+      font-weight: 600;
+      margin-bottom: 24px;
+      border: 1px solid rgba(86, 108, 129, 0.15);
+    }
+
+    .hero-title {
+      font-size: 3.8rem;
+      font-weight: 800;
+      line-height: 1.1;
+      margin-bottom: 16px;
+      letter-spacing: -2px;
+    }
+
+    .hero-subtitle {
+      font-size: 1.8rem;
+      font-weight: 500;
+      color: var(--text-secondary);
+      margin-bottom: 24px;
+      line-height: 1.3;
+    }
+
+    .hero-description {
+      font-size: 1.1rem;
+      color: var(--text-primary);
+      opacity: 0.9;
+      margin-bottom: 40px;
+      max-width: 600px;
+    }
+
+    .hero-cta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 16px;
+      margin-bottom: 48px;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      padding: 14px 28px;
+      border-radius: var(--radius-md);
+      font-family: var(--font-headings);
+      font-weight: 600;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: all var(--transition-speed);
+      border: none;
+    }
+
+    .btn-primary {
+      background-color: var(--accent);
+      color: #ffffff;
+      box-shadow: 0 4px 14px rgba(86, 108, 129, 0.3);
+    }
+
+    .btn-primary:hover {
+      background-color: var(--accent-hover);
+      color: #ffffff;
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px rgba(86, 108, 129, 0.4);
+    }
+
+    .btn-secondary {
+      background-color: transparent;
+      color: var(--text-primary);
+      border: 2px solid var(--border-color);
+    }
+
+    .btn-secondary:hover {
+      background-color: rgba(86, 108, 129, 0.05);
+      border-color: var(--accent);
+      transform: translateY(-2px);
+    }
+
+    /* SVG Animado de Redes/Servidores (Lado derecho del Hero) */
+    .hero-visual {
+      position: relative;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .network-svg {
+      width: 100%;
+      max-width: 420px;
+      height: auto;
+      filter: drop-shadow(0 10px 30px rgba(15, 20, 25, 0.1));
+    }
+
+    [data-theme="dark"] .network-svg {
+      filter: drop-shadow(0 10px 40px rgba(0, 0, 0, 0.5));
+    }
+
+    /* Animaciones SVG */
+    .pulse-dot {
+      animation: pulse 2s infinite;
+    }
+
+    .pulse-dot-delayed {
+      animation: pulse 2s infinite 1s;
+    }
+
+    .signal-line {
+      stroke-dasharray: 8;
+      animation: dash 30s linear infinite;
+    }
+
+    .server-blade {
+      animation: hoverServer 4s ease-in-out infinite alternate;
+    }
+
+    @keyframes pulse {
+      0% { r: 4px; opacity: 0.3; }
+      50% { r: 8px; opacity: 1; }
+      100% { r: 4px; opacity: 0.3; }
+    }
+
+    @keyframes dash {
+      to {
+        stroke-dashoffset: -1000;
+      }
+    }
+
+    @keyframes hoverServer {
+      0% { transform: translateY(0); }
+      100% { transform: translateY(-8px); }
+    }
+
+    /* Sobre Mí */
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 64px;
+      align-items: flex-start;
+    }
+
+    .about-bio {
+      font-size: 1.15rem;
+      line-height: 1.8;
+      color: var(--text-primary);
+    }
+
+    .about-bio p {
+      margin-bottom: 24px;
+    }
+
+    .about-bio strong {
+      color: var(--accent);
+    }
+
+    /* Información de Contacto / Detalles del CV */
+    .contact-card {
+      background-color: var(--bg-secondary);
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius-lg);
+      padding: 32px;
+      box-shadow: var(--shadow-md);
+    }
+
+    .contact-title {
+      font-size: 1.4rem;
+      margin-bottom: 24px;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .contact-title svg {
+      color: var(--accent);
+    }
+
+    .contact-list {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    .contact-item {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      padding: 12px 16px;
+      border-radius: var(--radius-sm);
+      transition: background-color var(--transition-speed);
+      cursor: pointer;
+    }
+
+    .contact-item:hover {
+      background-color: rgba(86, 108, 129, 0.05);
+    }
+
+    .contact-icon {
+      width: 44px;
+      height: 44px;
+      background-color: rgba(86, 108, 129, 0.1);
+      color: var(--accent);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+
+    .contact-info {
+      flex-grow: 1;
+    }
+
+    .contact-label {
+      font-size: 0.8rem;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      color: var(--text-secondary);
+      font-weight: 600;
+    }
+
+    .contact-value {
+      font-weight: 500;
+      font-size: 1rem;
+      word-break: break-all;
+    }
+
+    .copy-badge {
+      font-size: 0.75rem;
+      background-color: var(--accent);
+      color: #ffffff;
+      padding: 2px 8px;
+      border-radius: 4px;
+      opacity: 0;
+      transition: opacity var(--transition-speed);
+    }
+
+    .contact-item:hover .copy-badge {
+      opacity: 0.8;
+    }
+
+    /* Habilidades */
+    .skills-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 32px;
+    }
+
+    .skills-card {
+      background-color: var(--bg-secondary);
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius-lg);
+      padding: 40px;
+      box-shadow: var(--shadow-sm);
+      transition: transform var(--transition-speed), box-shadow var(--transition-speed);
+    }
+
+    .skills-card:hover {
+      transform: translateY(-4px);
+      box-shadow: var(--shadow-md);
+    }
+
+    .skills-card h3 {
+      font-size: 1.4rem;
+      margin-bottom: 24px;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      border-bottom: 1px solid var(--border-color);
+      padding-bottom: 16px;
+    }
+
+    .skills-card h3 svg {
+      color: var(--accent);
+    }
+
+    .skills-list {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    .skill-group-name {
+      font-weight: 600;
+      margin-bottom: 8px;
+      font-size: 1.05rem;
+    }
+
+    .skill-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .skill-tag {
+      background-color: rgba(86, 108, 129, 0.08);
+      color: var(--text-primary);
+      border: 1px solid rgba(86, 108, 129, 0.15);
+      padding: 6px 14px;
+      border-radius: 100px;
+      font-size: 0.9rem;
+      font-weight: 500;
+      transition: all var(--transition-speed);
+    }
+
+    .skill-tag:hover {
+      background-color: var(--accent);
+      color: #ffffff;
+      transform: scale(1.05);
+    }
+
+    .skills-blandas-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+    }
+
+    .blanda-item {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      background-color: rgba(86, 108, 129, 0.04);
+      padding: 16px;
+      border-radius: var(--radius-md);
+      border: 1px solid var(--border-color);
+    }
+
+    .blanda-item svg {
+      color: var(--accent);
+      flex-shrink: 0;
+    }
+
+    .blanda-text {
+      font-weight: 500;
+      font-size: 0.95rem;
+    }
+
+    /* Experiencia (Línea de Tiempo) */
+    .timeline {
+      position: relative;
+      max-width: 900px;
+      margin: 0 auto;
+      padding-left: 32px;
+    }
+
+    .timeline::before {
+      content: '';
+      position: absolute;
+      left: 8px;
+      top: 0;
+      width: 2px;
+      height: 100%;
+      background-color: var(--border-color);
+    }
+
+    .timeline-item {
+      position: relative;
+      margin-bottom: 48px;
+    }
+
+    .timeline-item:last-child {
+      margin-bottom: 0;
+    }
+
+    .timeline-dot {
+      position: absolute;
+      left: -32px;
+      top: 8px;
+      width: 18px;
+      height: 18px;
+      border-radius: 50%;
+      background-color: var(--bg-primary);
+      border: 4px solid var(--accent);
+      z-index: 2;
+      transition: transform var(--transition-speed);
+    }
+
+    .timeline-item:hover .timeline-dot {
+      transform: scale(1.3);
+      background-color: var(--accent);
+    }
+
+    .timeline-card {
+      background-color: var(--bg-secondary);
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius-lg);
+      padding: 32px;
+      box-shadow: var(--shadow-sm);
+      transition: transform var(--transition-speed), box-shadow var(--transition-speed);
+    }
+
+    .timeline-card:hover {
+      transform: translateY(-2px);
+      box-shadow: var(--shadow-md);
+    }
+
+    .timeline-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      margin-bottom: 16px;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    .timeline-year {
+      font-family: var(--font-headings);
+      background-color: var(--accent);
+      color: #ffffff;
+      padding: 6px 14px;
+      border-radius: 100px;
+      font-size: 0.85rem;
+      font-weight: 700;
+      letter-spacing: 0.5px;
+    }
+
+    .timeline-company {
+      font-size: 1rem;
+      color: var(--text-secondary);
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    .timeline-title {
+      font-size: 1.4rem;
+      font-weight: 700;
+      margin-top: 4px;
+      color: var(--text-primary);
+    }
+
+    .timeline-desc {
+      font-size: 1rem;
+      opacity: 0.85;
+      line-height: 1.7;
+    }
+
+    /* Educación y Certificaciones */
+    .edu-cert-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 40px;
+    }
+
+    .edu-item {
+      background-color: var(--bg-secondary);
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius-lg);
+      padding: 32px;
+      margin-bottom: 24px;
+      box-shadow: var(--shadow-sm);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .edu-item:last-child {
+      margin-bottom: 0;
+    }
+
+    .edu-item::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 4px;
+      height: 100%;
+      background-color: var(--accent);
+    }
+
+    .edu-duration {
+      font-size: 0.9rem;
+      color: var(--text-secondary);
+      font-weight: 600;
+      margin-bottom: 8px;
+    }
+
+    .edu-title {
+      font-size: 1.25rem;
+      font-weight: 700;
+      margin-bottom: 8px;
+    }
+
+    .edu-school {
+      font-size: 1rem;
+      font-weight: 500;
+      opacity: 0.9;
+    }
+
+    .edu-desc {
+      margin-top: 12px;
+      font-size: 0.95rem;
+      opacity: 0.8;
+    }
+
+    /* Cisco Certifications */
+    .cert-card {
+      background-color: var(--bg-secondary);
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius-lg);
+      padding: 36px;
+      box-shadow: var(--shadow-sm);
+    }
+
+    .cert-list {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    .cert-item {
+      display: flex;
+      gap: 16px;
+      align-items: flex-start;
+      padding: 16px;
+      background-color: rgba(86, 108, 129, 0.03);
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius-md);
+      transition: transform var(--transition-speed);
+    }
+
+    .cert-item:hover {
+      transform: translateX(4px);
+      background-color: rgba(86, 108, 129, 0.06);
+    }
+
+    .cert-badge-icon {
+      width: 48px;
+      height: 48px;
+      background-color: #00b4d8; /* Color representativo Cisco/Cert */
+      color: #ffffff;
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      font-weight: 800;
+      font-size: 0.8rem;
+    }
+
+    .cert-info {
+      flex-grow: 1;
+    }
+
+    .cert-name {
+      font-weight: 700;
+      font-size: 1.05rem;
+      margin-bottom: 4px;
+    }
+
+    .cert-org {
+      font-size: 0.85rem;
+      color: var(--text-secondary);
+      font-weight: 500;
+      margin-bottom: 2px;
+    }
+
+    .cert-date {
+      font-size: 0.8rem;
+      opacity: 0.7;
+    }
+
+    /* Referencias e Intereses */
+    .ref-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 24px;
+      margin-bottom: 48px;
+    }
+
+    .ref-card {
+      background-color: var(--bg-secondary);
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius-lg);
+      padding: 32px;
+      box-shadow: var(--shadow-sm);
+      display: flex;
+      align-items: flex-start;
+      gap: 20px;
+    }
+
+    .ref-avatar {
+      width: 56px;
+      height: 56px;
+      background-color: rgba(86, 108, 129, 0.1);
+      color: var(--accent);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      font-family: var(--font-headings);
+      font-weight: 700;
+      font-size: 1.2rem;
+    }
+
+    .ref-content {
+      flex-grow: 1;
+    }
+
+    .ref-name {
+      font-size: 1.2rem;
+      font-weight: 700;
+      margin-bottom: 4px;
+    }
+
+    .ref-job {
+      font-size: 0.9rem;
+      color: var(--text-secondary);
+      font-weight: 500;
+      margin-bottom: 12px;
+    }
+
+    .ref-phone {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-weight: 600;
+      font-size: 0.95rem;
+      background-color: rgba(86, 108, 129, 0.05);
+      padding: 6px 14px;
+      border-radius: 100px;
+      cursor: pointer;
+      transition: background-color var(--transition-speed);
+      border: 1px dashed var(--border-color);
+    }
+
+    .ref-phone:hover {
+      background-color: rgba(86, 108, 129, 0.1);
+      color: var(--accent-hover);
+    }
+
+    /* Intereses */
+    .interests-card {
+      background-color: var(--bg-secondary);
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius-lg);
+      padding: 40px;
+      box-shadow: var(--shadow-sm);
+    }
+
+    .interests-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 20px;
+    }
+
+    .interest-box {
+      background-color: rgba(86, 108, 129, 0.04);
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius-md);
+      padding: 24px;
+      text-align: center;
+      transition: transform var(--transition-speed), background-color var(--transition-speed);
+    }
+
+    .interest-box:hover {
+      transform: translateY(-2px);
+      background-color: rgba(86, 108, 129, 0.08);
+      border-color: var(--accent);
+    }
+
+    .interest-icon {
+      width: 48px;
+      height: 48px;
+      background-color: rgba(86, 108, 129, 0.1);
+      color: var(--accent);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 16px;
+    }
+
+    .interest-title {
+      font-weight: 600;
+      font-size: 1rem;
+      margin-bottom: 8px;
+    }
+
+    .interest-desc {
+      font-size: 0.85rem;
+      opacity: 0.8;
+    }
+
+    /* Footer */
+    footer {
+      background-color: var(--text-primary);
+      color: var(--bg-primary);
+      padding: 64px 0;
+      text-align: center;
+      font-size: 0.95rem;
+      transition: background-color var(--transition-speed), color var(--transition-speed);
+    }
+
+    footer p {
+      opacity: 0.8;
+      margin-bottom: 16px;
+    }
+
+    footer .social-icons {
+      display: flex;
+      justify-content: center;
+      gap: 16px;
+      margin-bottom: 24px;
+    }
+
+    footer .social-icon {
+      width: 40px;
+      height: 40px;
+      background-color: rgba(255, 255, 255, 0.1);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--bg-primary);
+      transition: background-color var(--transition-speed), transform var(--transition-speed);
+    }
+
+    footer .social-icon:hover {
+      background-color: var(--accent);
+      transform: translateY(-2px);
+    }
+
+    /* Toast de Copiado */
+    .toast {
+      position: fixed;
+      bottom: 32px;
+      right: 32px;
+      background-color: var(--text-primary);
+      color: var(--bg-primary);
+      padding: 16px 24px;
+      border-radius: var(--radius-md);
+      box-shadow: var(--shadow-lg);
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      transform: translateY(150%);
+      transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+      z-index: 2000;
+      font-weight: 500;
+      border: 1px solid var(--border-color);
+    }
+
+    .toast.show {
+      transform: translateY(0);
+    }
+
+    .toast-icon {
+      color: #2ec4b6; /* Verde agradable */
+    }
+
+    /* Animaciones de Entrada (Scroll) */
+    .reveal {
+      opacity: 0;
+      transform: translateY(30px);
+      transition: opacity 0.8s ease, transform 0.8s ease;
+    }
+
+    .reveal.active {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* Estilos Responsivos */
+    @media (max-width: 992px) {
+      .hero-title {
+        font-size: 3rem;
+      }
+      .hero-grid {
+        grid-template-columns: 1fr;
+        text-align: center;
+        gap: 32px;
+      }
+      .hero-badge, .hero-cta {
+        justify-content: center;
+      }
+      .hero-description {
+        margin-left: auto;
+        margin-right: auto;
+      }
+      .hero-visual {
+        order: -1;
+      }
+      .about-grid, .skills-grid, .edu-cert-grid {
+        grid-template-columns: 1fr;
+        gap: 40px;
+      }
+      .ref-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .nav-menu {
+        display: none; /* Simplificado para móviles en este diseño único */
+      }
+      .mobile-menu-btn {
+        display: block;
+      }
+      .section-title {
+        font-size: 1.8rem;
+      }
+      .skills-blandas-grid {
+        grid-template-columns: 1fr;
+      }
+      .timeline {
+        padding-left: 20px;
+      }
+      .timeline::before {
+        left: 4px;
+      }
+      .timeline-dot {
+        left: -20px;
+        width: 14px;
+        height: 14px;
+        border-width: 3px;
+      }
+      .timeline-card {
+        padding: 24px;
+      }
+      .timeline-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 8px;
+      }
+    }
+
+    /* ==========================================
+       ESTILOS DE IMPRESIÓN (Optimizado para CV de 2 páginas)
+       ========================================== */
+    @media print {
+      body {
+        background-color: #ffffff !important;
+        color: #000000 !important;
+        font-size: 11pt;
+      }
+      header, footer, .theme-toggle-btn, .btn, .hero-visual, .copy-badge, .toast {
+        display: none !important;
+      }
+      section {
+        padding: 20px 0 !important;
+        border-bottom: 1px solid #ccc !important;
+        page-break-inside: avoid;
+      }
+      .container {
+        max-width: 100% !important;
+        padding: 0 !important;
+      }
+      .section-title {
+        font-size: 16pt !important;
+        margin-bottom: 8px !important;
+      }
+      .section-title::after {
+        display: none !important;
+      }
+      .section-subtitle {
+        display: none !important;
+      }
+      .hero {
+        min-height: auto !important;
+        padding-top: 0 !important;
+      }
+      .hero-grid {
+        grid-template-columns: 1fr !important;
+        text-align: left !important;
+      }
+      .hero-title {
+        font-size: 24pt !important;
+        letter-spacing: normal !important;
+        margin-bottom: 4px !important;
+      }
+      .hero-subtitle {
+        font-size: 14pt !important;
+        margin-bottom: 12px !important;
+      }
+      .hero-description {
+        margin-bottom: 16px !important;
+      }
+      .about-grid, .skills-grid, .edu-cert-grid {
+        grid-template-columns: 1fr 1fr !important;
+        gap: 20px !important;
+      }
+      .contact-card, .skills-card, .timeline-card, .edu-item, .cert-card, .ref-card, .interests-card {
+        background-color: #ffffff !important;
+        border: none !important;
+        box-shadow: none !important;
+        padding: 0 !important;
+        margin-bottom: 12px !important;
+      }
+      .contact-list {
+        gap: 8px !important;
+      }
+      .contact-item {
+        padding: 4px 0 !important;
+      }
+      .contact-icon {
+        display: none !important;
+      }
+      .skills-blandas-grid {
+        grid-template-columns: 1fr 1fr !important;
+      }
+      .blanda-item {
+        background: none !important;
+        border: none !important;
+        padding: 4px 0 !important;
+      }
+      .blanda-item svg {
+        display: none !important;
+      }
+      .timeline::before {
+        display: none !important;
+      }
+      .timeline-dot {
+        display: none !important;
+      }
+      .timeline {
+        padding-left: 0 !important;
+      }
+      .timeline-header {
+        flex-direction: row !important;
+        justify-content: space-between !important;
+      }
+      .timeline-year {
+        background: none !important;
+        color: #000000 !important;
+        font-weight: bold !important;
+        padding: 0 !important;
+      }
+      .cert-item {
+        background: none !important;
+        border: none !important;
+        padding: 4px 0 !important;
+      }
+      .cert-badge-icon {
+        display: none !important;
+      }
+      .ref-grid {
+        grid-template-columns: 1fr 1fr !important;
+        gap: 20px !important;
+      }
+      .ref-avatar {
+        display: none !important;
+      }
+      .interests-grid {
+        grid-template-columns: repeat(4, 1fr) !important;
+      }
+      .interest-box {
+        background: none !important;
+        border: none !important;
+        padding: 0 !important;
+      }
+      .interest-icon {
+        display: none !important;
+      }
+    }
+
+    /* Redes Sociales Hero */
+    .hero-socials {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      margin-top: 24px;
+    }
+    .hero-socials-label {
+      font-size: 0.95rem;
+      color: var(--text-secondary);
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+    .hero-social-link {
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      border: 1px solid var(--border-color);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--text-primary);
+      transition: all var(--transition-speed);
+      background-color: var(--bg-secondary);
+      box-shadow: var(--shadow-sm);
+    }
+    .hero-social-link:hover {
+      color: var(--accent);
+      border-color: var(--accent);
+      background-color: rgba(86, 108, 129, 0.05);
+      transform: translateY(-2px);
+      box-shadow: var(--shadow-md);
+    }
+    
+    @media print {
+      .hero-socials {
+        display: none !important;
+      }
+    }
+  </style>
+</head>
+<body data-theme="dark">
+
+  <!-- Header -->
+  <header>
+    <div class="nav-container container">
+      <div class="logo">
+        <i data-lucide="shield-alert" style="stroke-width: 2.5px;"></i>
+        <div class="logo-text">
+          <span class="logo-names">MILTON <span>FERNANDO</span></span>
+          <span class="logo-lastnames">CHITACAPA AUCAPIÑA</span>
+        </div>
+      </div>
+      <nav>
+        <ul class="nav-menu">
+          <li><a href="#about" class="nav-link">Sobre Mí</a></li>
+          <li><a href="#skills" class="nav-link">Habilidades</a></li>
+          <li><a href="#experience" class="nav-link">Experiencia</a></li>
+          <li><a href="#education" class="nav-link">Educación</a></li>
+          <li><a href="#references" class="nav-link">Referencias</a></li>
+        </ul>
+      </nav>
+      <div class="nav-actions">
+        <!-- Theme Toggle -->
+        <button id="theme-toggle" class="theme-toggle-btn" aria-label="Cambiar tema de color">
+          <i data-lucide="sun" id="theme-icon"></i>
+        </button>
+        <!-- Print / CV Action -->
+        <button onclick="window.print()" class="btn btn-secondary" style="padding: 8px 16px; font-size: 0.9rem; border-radius: var(--radius-sm);">
+          <i data-lucide="printer" style="width:16px; height:16px;"></i>
+          Imprimir CV
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section id="hero" class="hero">
+    <div class="container hero-grid">
+      <div class="hero-content">
+        <div class="hero-badge">
+          <i data-lucide="terminal" style="width:14px; height:14px;"></i>
+          Disponible para nuevos desafíos
+        </div>
+        <h1 class="hero-title">Milton Fernando Chitacapa A.</h1>
+        <h2 class="hero-subtitle">Administrador de Infraestructura & Plataformas Tecnológicas</h2>
+        <p class="hero-description">
+          Especializado en el diseño, configuración y optimización de redes informáticas, soporte técnico y sistemas operativos. Enfocado en brindar soluciones tecnológicas robustas que mejoren la eficiencia y continuidad operativa de los negocios.
+        </p>
+        <div class="hero-cta">
+          <a href="#experience" class="btn btn-primary">
+            Ver Mi Experiencia
+            <i data-lucide="arrow-right" style="width:18px; height:18px;"></i>
+          </a>
+          <a href="#about" class="btn btn-secondary">
+            Información de Contacto
+            <i data-lucide="mail" style="width:18px; height:18px;"></i>
+          </a>
+        </div>
+        
+        <!-- Redes Sociales Hero -->
+        <div class="hero-socials">
+          <span class="hero-socials-label">Sígueme:</span>
+          <a href="https://wa.me/593987463951" target="_blank" rel="noopener noreferrer" class="hero-social-link" title="WhatsApp: 0987463951">
+            <i data-lucide="message-circle" style="width: 20px; height: 20px; color: #25d366;"></i>
+          </a>
+          <a href="https://www.facebook.com/fer.chitacapa/" target="_blank" rel="noopener noreferrer" class="hero-social-link" title="Facebook: @fer.chitacapa">
+            <i data-lucide="facebook" style="width: 20px; height: 20px; color: #1877f2;"></i>
+          </a>
+          <a href="https://x.com/ferchitacapa" target="_blank" rel="noopener noreferrer" class="hero-social-link" title="Twitter / X: @ferchitacapa">
+            <i data-lucide="twitter" style="width: 20px; height: 20px;"></i>
+          </a>
+          <a href="https://www.instagram.com/nando_mfca?igsh=MTR0ZHVmaTJmOHl3bg==" target="_blank" rel="noopener noreferrer" class="hero-social-link" title="Instagram: @nando_mfca">
+            <i data-lucide="instagram" style="width: 20px; height: 20px; color: #e1306c;"></i>
+          </a>
+        </div>
+      </div>
+      
+      <!-- Visualizador SVG interactivo (Servidor & Red) -->
+      <div class="hero-visual">
+        <svg class="network-svg" viewBox="0 0 400 400" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <!-- Background decorative circle -->
+          <circle cx="200" cy="200" r="160" stroke="var(--border-color)" stroke-width="1" stroke-dasharray="4 4" />
+          <circle cx="200" cy="200" r="100" stroke="var(--border-color)" stroke-width="1" />
+          
+          <!-- Connections lines -->
+          <line x1="200" y1="120" x2="100" y2="220" stroke="var(--accent)" stroke-width="2" class="signal-line" />
+          <line x1="200" y1="120" x2="300" y2="220" stroke="var(--accent)" stroke-width="2" class="signal-line" />
+          <line x1="100" y1="220" x2="200" y2="320" stroke="var(--accent)" stroke-width="2" />
+          <line x1="300" y1="220" x2="200" y2="320" stroke="var(--accent)" stroke-width="2" />
+          <line x1="200" y1="120" x2="200" y2="320" stroke="var(--accent)" stroke-dasharray="2 2" stroke-width="1.5" />
+          
+          <!-- Server Nodes (Main Server Stack in center-top) -->
+          <g class="server-blade" transform="translate(0, 0)">
+            <!-- Top Server -->
+            <rect x="150" y="80" width="100" height="40" rx="6" fill="var(--bg-secondary)" stroke="var(--accent)" stroke-width="2" />
+            <line x1="160" y1="95" x2="190" y2="95" stroke="var(--text-secondary)" stroke-width="2" />
+            <line x1="160" y1="105" x2="210" y2="105" stroke="var(--text-secondary)" stroke-width="2" />
+            <circle cx="230" cy="100" r="3" fill="#2ec4b6" class="pulse-dot" /> <!-- Green active status -->
+          </g>
+
+          <!-- Router / Network Node Left -->
+          <g transform="translate(0, 0)">
+            <rect x="60" y="200" width="80" height="40" rx="6" fill="var(--bg-secondary)" stroke="var(--accent)" stroke-width="2" />
+            <path d="M 80 220 L 120 220" stroke="var(--text-secondary)" stroke-width="2" stroke-dasharray="4 2" />
+            <circle cx="75" cy="220" r="3" fill="#ff9f1c" class="pulse-dot-delayed" /> <!-- Orange status -->
+            <text x="100" y="235" font-size="8" font-family="var(--font-headings)" fill="var(--text-secondary)" text-anchor="middle" font-weight="bold">LAN</text>
+          </g>
+
+          <!-- Cloud / Client Node Right -->
+          <g transform="translate(0, 0)">
+            <rect x="260" y="200" width="80" height="40" rx="6" fill="var(--bg-secondary)" stroke="var(--accent)" stroke-width="2" />
+            <circle cx="275" cy="220" r="3" fill="#00b4d8" class="pulse-dot" /> <!-- Blue status -->
+            <text x="300" y="222" font-size="8" font-family="var(--font-headings)" fill="var(--text-secondary)" text-anchor="middle" font-weight="bold">CISCO</text>
+            <text x="300" y="233" font-size="7" font-family="var(--font-headings)" fill="var(--text-secondary)" text-anchor="middle">NET ACAD</text>
+          </g>
+
+          <!-- Terminal / DB Node Bottom -->
+          <g transform="translate(0, 0)">
+            <rect x="150" y="300" width="100" height="40" rx="6" fill="var(--bg-secondary)" stroke="var(--accent)" stroke-width="2" />
+            <!-- Tiny screen representation -->
+            <rect x="158" y="306" width="30" height="18" rx="2" fill="var(--text-primary)" />
+            <line x1="162" y1="312" x2="172" y2="312" stroke="#2ec4b6" stroke-width="1.5" />
+            <line x1="162" y1="318" x2="182" y2="318" stroke="#2ec4b6" stroke-width="1" />
+            <text x="218" y="324" font-size="9" font-family="var(--font-headings)" fill="var(--text-primary)" font-weight="bold">>_ OS</text>
+          </g>
+        </svg>
+      </div>
+    </div>
+  </section>
+
+  <!-- Sobre Mí Section -->
+  <section id="about" class="reveal">
+    <div class="container">
+      <h2 class="section-title">Sobre Mí</h2>
+      <p class="section-subtitle">Conoce más sobre mi perfil, experiencia y datos de contacto.</p>
+      
+      <div class="about-grid">
+        <div class="about-bio">
+          <p>
+            Soy estudiante de la carrera de <strong>Administración de Infraestructura y Plataformas Tecnológicas</strong>, cursando actualmente el último nivel. Cuento con una sólida formación académica en configuración de redes, mantenimiento de infraestructura de datos y gestión de sistemas operativos (Linux y Windows).
+          </p>
+          <p>
+            Además de mis conocimientos técnicos, poseo amplia experiencia práctica en la <strong>administración y gestión integral de negocios</strong>. He trabajado liderando establecimientos comerciales, administrando inventarios, planificando estrategias y brindando soporte al cliente. 
+          </p>
+          <p>
+            Me considero una persona enfocada en la <strong>resolución de problemas técnicos</strong> y la optimización de recursos, combinando habilidades organizativas con un profundo entusiasmo por las soluciones tecnológicas modernas.
+          </p>
+        </div>
+        
+        <!-- Tarjeta de Contacto (CV Info) -->
+        <div class="contact-card">
+          <h3 class="contact-title">
+            <i data-lucide="card-id"></i>
+            Datos de Contacto
+          </h3>
+          <div class="contact-list">
+            <!-- Email -->
+            <div class="contact-item" onclick="copyToClipboard('nandochitacapa@gmail.com', 'Correo')" title="Haga clic para copiar">
+              <div class="contact-icon">
+                <i data-lucide="mail"></i>
+              </div>
+              <div class="contact-info">
+                <div class="contact-label">Email Principal</div>
+                <div class="contact-value">nandochitacapa@gmail.com</div>
+              </div>
+              <span class="copy-badge">Copiar</span>
+            </div>
+            
+            <!-- Email Institucional -->
+            <div class="contact-item" onclick="copyToClipboard('mfernando.chitacapa@ucuenca.edu.ec', 'Correo institucional')" title="Haga clic para copiar">
+              <div class="contact-icon">
+                <i data-lucide="mail-open"></i>
+              </div>
+              <div class="contact-info">
+                <div class="contact-label">Email Institucional</div>
+                <div class="contact-value">mfernando.chitacapa@ucuenca.edu.ec</div>
+              </div>
+              <span class="copy-badge">Copiar</span>
+            </div>
+
+            <!-- Teléfono -->
+            <div class="contact-item" onclick="copyToClipboard('0987463951', 'Teléfono')" title="Haga clic para copiar">
+              <div class="contact-icon">
+                <i data-lucide="phone"></i>
+              </div>
+              <div class="contact-info">
+                <div class="contact-label">Teléfono</div>
+                <div class="contact-value">0987463951</div>
+              </div>
+              <span class="copy-badge">Copiar</span>
+            </div>
+
+            <!-- WhatsApp -->
+            <a href="https://wa.me/593987463951" target="_blank" rel="noopener noreferrer" class="contact-item" style="color: inherit; text-decoration: none;" title="Abrir chat de WhatsApp">
+              <div class="contact-icon" style="background-color: rgba(37, 211, 102, 0.1); color: #25d366;">
+                <i data-lucide="message-circle"></i>
+              </div>
+              <div class="contact-info">
+                <div class="contact-label">WhatsApp</div>
+                <div class="contact-value">0987463951 (Enviar Mensaje)</div>
+              </div>
+              <span class="copy-badge" style="opacity: 0.8; background-color: #25d366; color: white;">Chat</span>
+            </a>
+
+            <!-- Facebook -->
+            <a href="https://www.facebook.com/fer.chitacapa/" target="_blank" rel="noopener noreferrer" class="contact-item" style="color: inherit; text-decoration: none;" title="Visitar Facebook">
+              <div class="contact-icon" style="background-color: rgba(24, 119, 242, 0.1); color: #1877f2;">
+                <i data-lucide="facebook"></i>
+              </div>
+              <div class="contact-info">
+                <div class="contact-label">Facebook</div>
+                <div class="contact-value">@fer.chitacapa</div>
+              </div>
+              <span class="copy-badge" style="opacity: 0.8; background-color: #1877f2; color: white;">Ver</span>
+            </a>
+
+            <!-- Twitter / X -->
+            <a href="https://x.com/ferchitacapa" target="_blank" rel="noopener noreferrer" class="contact-item" style="color: inherit; text-decoration: none;" title="Visitar Twitter / X">
+              <div class="contact-icon" style="background-color: rgba(15, 20, 25, 0.1); color: var(--text-primary);">
+                <i data-lucide="twitter"></i>
+              </div>
+              <div class="contact-info">
+                <div class="contact-label">Twitter / X</div>
+                <div class="contact-value">@ferchitacapa</div>
+              </div>
+              <span class="copy-badge" style="opacity: 0.8; background-color: var(--text-primary); color: var(--bg-primary);">Ver</span>
+            </a>
+
+            <!-- Instagram -->
+            <a href="https://www.instagram.com/nando_mfca?igsh=MTR0ZHVmaTJmOHl3bg==" target="_blank" rel="noopener noreferrer" class="contact-item" style="color: inherit; text-decoration: none;" title="Visitar Instagram">
+              <div class="contact-icon" style="background-color: rgba(225, 48, 108, 0.1); color: #e1306c;">
+                <i data-lucide="instagram"></i>
+              </div>
+              <div class="contact-info">
+                <div class="contact-label">Instagram</div>
+                <div class="contact-value">@nando_mfca</div>
+              </div>
+              <span class="copy-badge" style="opacity: 0.8; background-color: #e1306c; color: white;">Ver</span>
+            </a>
+
+            <!-- C.I. -->
+            <div class="contact-item" onclick="copyToClipboard('0105914840', 'Cédula')" title="Haga clic para copiar">
+              <div class="contact-icon">
+                <i data-lucide="user-check"></i>
+              </div>
+              <div class="contact-info">
+                <div class="contact-label">Cédula de Identidad</div>
+                <div class="contact-value">0105914840</div>
+              </div>
+              <span class="copy-badge">Copiar</span>
+            </div>
+
+            <!-- Dirección -->
+            <div class="contact-item" onclick="copyToClipboard('1 de Septiembre y Calle de la Estancia (Sector San Jose de Huzhil)', 'Dirección')" title="Haga clic para copiar">
+              <div class="contact-icon">
+                <i data-lucide="map-pin"></i>
+              </div>
+              <div class="contact-info">
+                <div class="contact-label">Dirección</div>
+                <div class="contact-value">1 de Septiembre y Calle de la Estancia (San Jose de Huzhil)</div>
+              </div>
+              <span class="copy-badge">Copiar</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Habilidades Section -->
+  <section id="skills" class="reveal">
+    <div class="container">
+      <h2 class="section-title">Habilidades</h2>
+      <p class="section-subtitle">Mis destrezas y herramientas en áreas técnicas y organizacionales.</p>
+      
+      <div class="skills-grid">
+        <!-- Habilidades Técnicas -->
+        <div class="skills-card">
+          <h3>
+            <i data-lucide="cpu"></i>
+            Habilidades Técnicas
+          </h3>
+          <div class="skills-list">
+            <div>
+              <div class="skill-group-name">Redes e Infraestructura</div>
+              <div class="skill-tags">
+                <span class="skill-tag">Configuración de Redes</span>
+                <span class="skill-tag">Mantenimiento de Redes</span>
+                <span class="skill-tag">Cisco Packet Tracer</span>
+                <span class="skill-tag">Topologías LAN/WAN</span>
+              </div>
+            </div>
+            
+            <div>
+              <div class="skill-group-name">Sistemas Operativos</div>
+              <div class="skill-tags">
+                <span class="skill-tag">Linux / Unix</span>
+                <span class="skill-tag">Windows Server / Client</span>
+                <span class="skill-tag">Configuración de Entornos Virtuales</span>
+              </div>
+            </div>
+
+            <div>
+              <div class="skill-group-name">Programación y Automatización</div>
+              <div class="skill-tags">
+                <span class="skill-tag">Python (Nivel Básico)</span>
+                <span class="skill-tag">Bash Scripting</span>
+                <span class="skill-tag">Automatización de tareas</span>
+              </div>
+            </div>
+
+            <div>
+              <div class="skill-group-name">Diseño, Hardware y Electrónica</div>
+              <div class="skill-tags">
+                <span class="skill-tag">Modelado 3D (SketchUp)</span>
+                <span class="skill-tag">Adobe Illustrator</span>
+                <span class="skill-tag">Arduino</span>
+                <span class="skill-tag">Diseño de PCB</span>
+                <span class="skill-tag">Mantenimiento de Hardware</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Habilidades Blandas -->
+        <div class="skills-card">
+          <h3>
+            <i data-lucide="users"></i>
+            Habilidades Blandas
+          </h3>
+          <p style="margin-bottom: 24px; opacity: 0.85;">
+            Habilidades interpersonales y administrativas adquiridas a lo largo de mi trayectoria laboral y en la gestión de negocios:
+          </p>
+          <div class="skills-blandas-grid">
+            <div class="blanda-item">
+              <i data-lucide="briefcase"></i>
+              <span class="blanda-text">Gestión y administración de negocios</span>
+            </div>
+            <div class="blanda-item">
+              <i data-lucide="brain-circuit"></i>
+              <span class="blanda-text">Toma de decisiones y pensamiento estratégico</span>
+            </div>
+            <div class="blanda-item">
+              <i data-lucide="wrench"></i>
+              <span class="blanda-text">Resolución de problemas técnicos</span>
+            </div>
+            <div class="blanda-item">
+              <i data-lucide="award"></i>
+              <span class="blanda-text">Liderazgo y trabajo en equipo</span>
+            </div>
+            <div class="blanda-item">
+              <i data-lucide="message-square"></i>
+              <span class="blanda-text">Atención al cliente y comunicación</span>
+            </div>
+            <div class="blanda-item">
+              <i data-lucide="trending-up"></i>
+              <span class="blanda-text">Planificación estratégica de inventarios</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Experiencia Section -->
+  <section id="experience" class="reveal">
+    <div class="container">
+      <h2 class="section-title">Experiencia Laboral</h2>
+      <p class="section-subtitle">Mi trayectoria profesional en el sector tecnológico y de gestión de negocios.</p>
+      
+      <div class="timeline">
+        <!-- Experiencia 1 -->
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-card">
+            <div class="timeline-header">
+              <span class="timeline-year">2026</span>
+              <span class="timeline-company">APC TECNOLOGÍA</span>
+            </div>
+            <h3 class="timeline-title">Prácticas Preprofesionales</h3>
+            <p class="timeline-desc" style="margin-top: 12px;">
+              Cumplimiento exitoso de <strong>260 horas</strong> de prácticas preprofesionales obligatorias. Las actividades clave incluyeron:
+            </p>
+            <ul style="margin: 12px 0 0 20px; opacity: 0.85; line-height: 1.7;">
+              <li>Mantenimiento preventivo y correctivo de equipos tecnológicos.</li>
+              <li>Diagnóstico y soporte técnico de computadores y periféricos.</li>
+              <li>Configuración física y lógica de redes LAN.</li>
+              <li>Atención al público en ventas y asesoramiento tecnológico especializado.</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Experiencia 2 -->
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-card">
+            <div class="timeline-header">
+              <span class="timeline-year">Diciembre 2025</span>
+              <span class="timeline-company">Coordinación de Educación Zonal 6 - Fase VI</span>
+            </div>
+            <h3 class="timeline-title">Vinculación con la Sociedad</h3>
+            <p class="timeline-desc" style="margin-top: 12px;">
+              Proyecto de vinculación social desarrollado en la <strong>Unidad Educativa Mary Corylé</strong>. Enfocado en:
+            </p>
+            <ul style="margin: 12px 0 0 20px; opacity: 0.85; line-height: 1.7;">
+              <li>Mantenimiento integral de la infraestructura tecnológica de los laboratorios de computación.</li>
+              <li>Reestructuración y cableado de la red de datos interna para garantizar la conectividad de los estudiantes.</li>
+              <li>Optimización y configuración de sistemas operativos de los equipos de cómputo del plantel educativo.</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Experiencia 3 -->
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-card">
+            <div class="timeline-header">
+              <span class="timeline-year">2021 - Actualidad</span>
+              <span class="timeline-company">Administrador "JOSÉ JOSÉ" / "LA LEYENDA"</span>
+            </div>
+            <h3 class="timeline-title">Administrador General</h3>
+            <p class="timeline-desc" style="margin-top: 12px;">
+              Responsable de la gestión integral del establecimiento comercial. Mis funciones clave son:
+            </p>
+            <ul style="margin: 12px 0 0 20px; opacity: 0.85; line-height: 1.7;">
+              <li>Administración y control riguroso de inventarios de productos.</li>
+              <li>Planificación estratégica para el crecimiento continuo del negocio y optimización de recursos.</li>
+              <li>Servicio directo al cliente, fidelización y resolución de reclamos.</li>
+              <li>Gestión operativa del personal y supervisión del cumplimiento de metas.</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Experiencia 4 -->
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-card">
+            <div class="timeline-header">
+              <span class="timeline-year">2009</span>
+              <span class="timeline-company">Logística y Transporte</span>
+            </div>
+            <h3 class="timeline-title">Conductor Profesional & Operaciones</h3>
+            <p class="timeline-desc" style="margin-top: 12px;">
+              Gestión operativa, servicio al cliente y logística en transporte. Co-fundador de una compañía local de transporte mixto, colaborando activamente en la estructuración organizacional de las rutas y procesos operativos iniciales.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Educación y Certificaciones Section -->
+  <section id="education" class="reveal">
+    <div class="container">
+      <h2 class="section-title">Educación & Certificaciones</h2>
+      <p class="section-subtitle">Mi formación académica formal y certificaciones complementarias de la industria.</p>
+      
+      <div class="edu-cert-grid">
+        <!-- Educación Formal -->
+        <div>
+          <h3 style="font-size: 1.5rem; margin-bottom: 24px; display: flex; align-items: center; gap: 10px;">
+            <i data-lucide="graduation-cap" style="color: var(--accent);"></i>
+            Educación Formal
+          </h3>
+          
+          <div class="edu-item">
+            <div class="edu-duration">2024 - ACTUALIDAD (Último Nivel)</div>
+            <div class="edu-title">Tecnología en Administración de Infraestructura y Plataformas Tecnológicas</div>
+            <div class="edu-school">Universidad de Cuenca / Instituto Superior Universitario Tecnológico del Azuay</div>
+            <p class="edu-desc">Actualmente desarrollando el proyecto de titulación para la obtención del título profesional.</p>
+          </div>
+
+          <div class="edu-item">
+            <div class="edu-duration">Graduado en 2009</div>
+            <div class="edu-title">Bachiller Técnico en Comercio y Administración</div>
+            <div class="edu-school">Instituto Técnico Fiscal "Francisco Febres Cordero"</div>
+            <p class="edu-desc">Especialización en Informática. Formación inicial en algoritmos, bases de datos y herramientas de oficina.</p>
+          </div>
+        </div>
+
+        <!-- Certificaciones -->
+        <div>
+          <h3 style="font-size: 1.5rem; margin-bottom: 24px; display: flex; align-items: center; gap: 10px;">
+            <i data-lucide="file-badge" style="color: var(--accent);"></i>
+            Certificaciones Cisco Academy
+          </h3>
+          
+          <div class="cert-card">
+            <div class="cert-list">
+              <!-- Cert 1 -->
+              <div class="cert-item">
+                <div class="cert-badge-icon">IoT</div>
+                <div class="cert-info">
+                  <div class="cert-name">Introducción al Internet de las Cosas y Transformación Digital</div>
+                  <div class="cert-org">Cisco Networking Academy</div>
+                  <div class="cert-date">Agosto 2025</div>
+                </div>
+              </div>
+
+              <!-- Cert 2 -->
+              <div class="cert-item">
+                <div class="cert-badge-icon">NET</div>
+                <div class="cert-info">
+                  <div class="cert-name">Conceptos Básicos de Redes</div>
+                  <div class="cert-org">Cisco Networking Academy</div>
+                  <div class="cert-date">Julio 2025</div>
+                </div>
+              </div>
+
+              <!-- Cert 3 -->
+              <div class="cert-item">
+                <div class="cert-badge-icon">PT</div>
+                <div class="cert-info">
+                  <div class="cert-name">Introducción a Cisco Packet Tracer</div>
+                  <div class="cert-org">Cisco Networking Academy</div>
+                  <div class="cert-date">Diciembre 2024</div>
+                </div>
+              </div>
+
+              <!-- Cert 4 -->
+              <div class="cert-item">
+                <div class="cert-badge-icon">TUX</div>
+                <div class="cert-info">
+                  <div class="cert-name">Linux Unhatched</div>
+                  <div class="cert-org">Cisco Networking Academy</div>
+                  <div class="cert-date">Diciembre 2024</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Referencias e Intereses Section -->
+  <section id="references" class="reveal" style="border-bottom: none;">
+    <div class="container">
+      <h2 class="section-title">Referencias & Intereses</h2>
+      <p class="section-subtitle">Contactos de recomendación y áreas de esparcimiento personal.</p>
+      
+      <!-- Referencias -->
+      <h3 style="font-size: 1.5rem; margin-bottom: 24px; display: flex; align-items: center; gap: 10px;">
+        <i data-lucide="users-round" style="color: var(--accent);"></i>
+        Referencias Profesionales
+      </h3>
+      
+      <div class="ref-grid">
+        <!-- Ref 1 -->
+        <div class="ref-card">
+          <div class="ref-avatar">JC</div>
+          <div class="ref-content">
+            <div class="ref-name">José Cárdenas</div>
+            <div class="ref-job">Administrador “JOSÉ JOSÉ”</div>
+            <div class="ref-phone" onclick="copyToClipboard('0987725872', 'José Cárdenas')" title="Haga clic para copiar teléfono">
+              <i data-lucide="phone" style="width: 14px; height: 14px;"></i>
+              0987725872
+            </div>
+          </div>
+        </div>
+
+        <!-- Ref 2 -->
+        <div class="ref-card">
+          <div class="ref-avatar">MV</div>
+          <div class="ref-content">
+            <div class="ref-name">Miguel Ángel Vizhco</div>
+            <div class="ref-job">Biólogo Profesional</div>
+            <div class="ref-phone" onclick="copyToClipboard('0968034948', 'Miguel Ángel Vizhco')" title="Haga clic para copiar teléfono">
+              <i data-lucide="phone" style="width: 14px; height: 14px;"></i>
+              0968034948
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Intereses -->
+      <h3 style="font-size: 1.5rem; margin-bottom: 24px; display: flex; align-items: center; gap: 10px;">
+        <i data-lucide="heart" style="color: var(--accent);"></i>
+        Áreas de Interés
+      </h3>
+      
+      <div class="interests-card">
+        <div class="interests-grid">
+          <!-- Interés 1 -->
+          <div class="interest-box">
+            <div class="interest-icon">
+              <i data-lucide="search"></i>
+            </div>
+            <div class="interest-title">Aprendizaje Autodidacta</div>
+            <div class="interest-desc">Investigación y despliegue constante de nuevos softwares, herramientas y utilidades libres.</div>
+          </div>
+
+          <!-- Interés 2 -->
+          <div class="interest-box">
+            <div class="interest-icon">
+              <i data-lucide="monitor"></i>
+            </div>
+            <div class="interest-title">Entornos Virtuales</div>
+            <div class="interest-desc">Configuración y virtualización de laboratorios para simulaciones de red y pruebas de OS.</div>
+          </div>
+
+          <!-- Interés 3 -->
+          <div class="interest-box">
+            <div class="interest-icon">
+              <i data-lucide="gamepad-2"></i>
+            </div>
+            <div class="interest-title">Gaming en PC & Consolas</div>
+            <div class="interest-desc">Afición que impulsa el conocimiento práctico de optimizaciones de rendimiento y ensamblado de equipos.</div>
+          </div>
+
+          <!-- Interés 4 -->
+          <div class="interest-box">
+            <div class="interest-icon">
+              <i data-lucide="hard-drive"></i>
+            </div>
+            <div class="interest-title">Hardware & Optimización</div>
+            <div class="interest-desc">Seguimiento constante a las tendencias de arquitectura informática, enfriamiento y overclocking.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <div class="social-icons">
+        <a href="mailto:nandochitacapa@gmail.com" class="social-icon" aria-label="Enviar Correo" title="Correo">
+          <i data-lucide="mail"></i>
+        </a>
+        <a href="tel:0987463951" class="social-icon" aria-label="Llamar por teléfono" title="Llamar">
+          <i data-lucide="phone"></i>
+        </a>
+        <a href="https://wa.me/593987463951" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="WhatsApp" title="WhatsApp: 0987463951">
+          <i data-lucide="message-circle" style="color: #25d366;"></i>
+        </a>
+        <a href="https://www.facebook.com/fer.chitacapa/" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="Facebook" title="Facebook: @fer.chitacapa">
+          <i data-lucide="facebook" style="color: #1877f2;"></i>
+        </a>
+        <a href="https://x.com/ferchitacapa" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="Twitter / X" title="Twitter / X: @ferchitacapa">
+          <i data-lucide="twitter"></i>
+        </a>
+        <a href="https://www.instagram.com/nando_mfca?igsh=MTR0ZHVmaTJmOHl3bg==" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="Instagram" title="Instagram: @nando_mfca">
+          <i data-lucide="instagram" style="color: #e1306c;"></i>
+        </a>
+      </div>
+      <p>&copy; 2026 Milton Fernando Chitacapa Aucapiña. Todos los derechos reservados.</p>
+      <p style="font-size: 0.8rem; opacity: 0.5;">Construido con HTML, CSS y JavaScript Vanilla. Diseñado con la paleta de colores de tu CV original.</p>
+    </div>
+  </footer>
+
+  <!-- Toast Notification -->
+  <div id="toast" class="toast">
+    <i data-lucide="check-circle" class="toast-icon"></i>
+    <span id="toast-message">Copiado al portapapeles</span>
+  </div>
+
+  <!-- Scripts JavaScript -->
+  <script>
+    // Inicializar Iconos Lucide
+    lucide.createIcons();
+
+    // Lógica de Modo Claro / Modo Oscuro
+    const themeToggleBtn = document.getElementById('theme-toggle');
+    const themeIcon = document.getElementById('theme-icon');
+    const body = document.body;
+
+    // Cargar preferencia del tema guardado
+    const savedTheme = localStorage.getItem('theme') || 'dark';
+    body.setAttribute('data-theme', savedTheme);
+    updateThemeIcon(savedTheme);
+
+    themeToggleBtn.addEventListener('click', () => {
+      const currentTheme = body.getAttribute('data-theme');
+      const newTheme = currentTheme === 'light' ? 'dark' : 'light';
+      
+      body.setAttribute('data-theme', newTheme);
+      localStorage.setItem('theme', newTheme);
+      updateThemeIcon(newTheme);
+    });
+
+    function updateThemeIcon(theme) {
+      if (theme === 'dark') {
+        themeIcon.setAttribute('data-lucide', 'sun');
+      } else {
+        themeIcon.setAttribute('data-lucide', 'moon');
+      }
+      lucide.createIcons();
+    }
+
+    // Lógica para Copiar al Portapapeles
+    function copyToClipboard(text, label) {
+      navigator.clipboard.writeText(text).then(() => {
+        showToast(`${label} copiado al portapapeles con éxito`);
+      }).catch(err => {
+        console.error('Error al copiar texto: ', err);
+      });
+    }
+
+    // Lógica de Toast de Notificación
+    function showToast(message) {
+      const toast = document.getElementById('toast');
+      const toastMessage = document.getElementById('toast-message');
+      
+      toastMessage.textContent = message;
+      toast.classList.add('show');
+      
+      setTimeout(() => {
+        toast.classList.remove('show');
+      }, 3000);
+    }
+
+    // Animación de Scroll (Reveal elements)
+    const revealElements = document.querySelectorAll('.reveal');
+
+    function revealOnScroll() {
+      const triggerBottom = window.innerHeight * 0.85;
+
+      revealElements.forEach(el => {
+        const elTop = el.getBoundingClientRect().top;
+        if (elTop < triggerBottom) {
+          el.classList.add('active');
+        } else {
+          el.classList.remove('active'); // Opcional: remover si quieres que se re-animen al subir
+        }
+      });
+    }
+
+    window.addEventListener('scroll', revealOnScroll);
+    // Ejecutar al inicio para revelar elementos ya visibles
+    revealOnScroll();
+  </script>
+</body>
+</html>
